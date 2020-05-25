@@ -1,0 +1,217 @@
+:root {
+  --mainBlue: #2a2a72;
+  --lightBlue: #009ffd;
+  --mainWhite: #f3f3f3;
+  --mainDark: #232528;
+  --mainYellow: #ffa400;
+}
+
+body {
+  font-family: 'Oswald', 'sans-serif' !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+}
+
+.text-title {
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.text-blue {
+  color: var(--mainBlue);
+}
+
+.text-bright {
+  color: var(--lightBlue);
+}
+
+/* =======================================
+           PRODUCT LIST  
+   =======================================*/
+.products-wrapper {
+  background-image: url("https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-position: center;
+  background-size: cover;
+
+  .card {
+    background: transparent;
+  }
+}
+
+/* =======================================
+        END PRODUCT LIST  
+   =======================================*/
+
+/* =======================================
+         DETAILS AND INDIVIDUAL PRODUCT
+   =======================================*/
+.product-detail {
+  background-image: url("https://images.pexels.com/photos/47261/pexels-photo-47261.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+}
+
+.img-container {
+  position: relative;
+  overflow: hidden;
+
+  &:hover .cart-btn {
+    transform: translate(0, 0);
+    transition: all 1s linear;
+  }
+
+  &:hover .card-img-top {
+    transform: scale(1.2);
+  }
+}
+
+.cart-btn {
+  text-transform: capitalize;
+  font-size: 1.4rem;
+  background: transparent;
+  border: 0.5rem solid var(--lightBlue);
+  color: var(--lightBlue);
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  margin: 0.2rem 0.5rem 0.2rem 0;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background: var(--lightBlue);
+    color: var(--mainBlue);
+  }
+
+  &focus {
+    outline: none;
+  }
+
+  .card {
+    border-color: transparent;
+    transition: all 1s linear;
+
+    &:hover {
+      border: 0.04rem solid rgba(0, 0, 0, 0.2);
+      box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .card-img-top {
+    transition: all 1s linear;
+  }
+
+  .card-footer {
+    background: transparent;
+    border-top: transparent;
+    transition: all 1s linear;
+
+    &:hover {
+      // background: rgba(247, 247, 247);
+    }
+  }
+}
+
+.product-btn {
+  left: 0px
+}
+
+/* =======================================
+      END DETAILS AND INDIVIDUAL PRODUCT  
+   =======================================*/
+/* =======================================
+                NAVBAR  
+   =======================================*/
+.nav-wrapper {
+  background: var(--mainBlue) !important;
+
+  .nav-link {
+    color: var(--mainWhite) !important;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+  }
+}
+
+.cart-btn-navbar {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.2rem 0.4rem;
+  background: transparent;
+  border: 1px solid var(--lightBlue);
+  color: var(--lightBlue);
+  font-size: 1.4rem;
+  border-radius: 0.5 0 0 0;
+  transform: translate(100%, 100%);
+
+  &:hover {
+    color: var(--mainBlue);
+    cursor: pointer;
+    background: var(--lightBlue);
+    transition: all 0.5s;
+  }
+}
+
+/* =======================================
+           END NAVBAR  
+   =======================================*/
+
+
+
+
+
+.cart-btn {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 0.2rem 0.4rem;
+  background: var(--lightBlue);
+  border: none;
+  color: var(--mainWhite);
+  font-size: 1.4rem;
+  border-radius: 0.5 0 0 0;
+  transform: translate(100%, 100%);
+
+  &:hover {
+    color: var(--mainBlue);
+    cursor: pointer;
+  }
+}
+
+
+
+/* =======================================
+           PRODUCT DETAIL  
+   =======================================*/
+
+.detail-btn-wrapper {
+  display: flex;
+}
+
+.cart-btn-details {
+
+  border-radius: 0.5rem;
+  margin: 20px;
+
+}
+
+/* =======================================
+           END PRODUCT DETAIL 
+   =======================================*/
+.btn-black {
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 0 !important;
+  border: 0.1rem solid var(--mainDark) !important;
+
+  &:hover {
+    background: var(--mainDark) !important;
+    color: var(--mainWhite) !important;
+  }
+}
+
+.cart-icot {
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: var(--mainYellow);
+}
