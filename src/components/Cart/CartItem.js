@@ -3,8 +3,8 @@ import { ProductConsumer } from "../../Context";
 
 export default class CartList extends Component {
   render() {
-    const { id, title, price, img, total } = this.props.item;
-    const { removeItem } = this.props.value;
+    const { id, title, price, img, total, count } = this.props.item;
+    const { increment, decrement, removeItem } = this.props.value;
     return (
       <ProductConsumer>
         {(value) => {
@@ -28,7 +28,23 @@ export default class CartList extends Component {
                   {price}
                 </div>
                 <div className="col-10 mx-auto col-lg-2 my-2 my-lg-0">
-                  <div className="d-flex justify-content-center"></div>
+                  <div className="d-flex justify-content-center">
+                    <div>
+                      <span
+                        className="btn btn-black mx-1"
+                        onClick={() => decrement(id)}
+                      >
+                        -
+                      </span>
+                      <span className="btn btn-black mx-1">{count}</span>
+                      <span
+                        className="btn btn-black mx-1"
+                        onClick={() => increment(id)}
+                      >
+                        +
+                      </span>
+                    </div>
+                  </div>
                 </div>
                 <div className="col-10 mx-auto col-lg-2">
                   <div className="cart-icon" onClick={() => removeItem(id)}>
